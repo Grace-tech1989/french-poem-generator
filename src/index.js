@@ -1,1 +1,13 @@
-alert("hello word")
+function generatePoem(event) {
+    event.preventDefault();
+
+    new Typewriter("#poem", {
+      strings: "chanson d'automme chanson d'automme",
+      autoStart: true,
+      delay: 1,
+      cursor:"",
+});
+}
+
+let poemFormElement = document.querySelector("#poem-generator-form")
+poemFormElement.addEventListener("submit", generatePoem)
